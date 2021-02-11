@@ -1,0 +1,23 @@
+a{
+    text-decoration: none!important;
+    color: black!important;
+}
+
+.nav{
+    background-color: transparent;
+    position: sticky;
+    top: 0;
+}
+
+.nav_option > a{
+    font-size: 12px!important;
+}
+
+.bg_img{
+    background-image: url('https://img.ev.mu/images/regions/52/960x640/52.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+}

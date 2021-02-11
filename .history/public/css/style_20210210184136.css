@@ -1,0 +1,12 @@
+a{
+    text-decoration: none!important;
+    color: black!important;
+}
+
+ul{
+    list-style: none;
+}
+
+nav .nav_left ul, .nav_right ul{
+    display: flex;
+}

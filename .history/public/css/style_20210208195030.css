@@ -1,0 +1,12 @@
+a{
+    text-decoration: none!important;
+    color: black!important;
+}
+
+.nav_option > a{
+    font-size: 12px!important;
+}
+
+.bg_img{
+    height: 200px;
+}

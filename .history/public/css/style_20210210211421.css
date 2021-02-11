@@ -1,0 +1,18 @@
+:root{
+    --border-light: rgb(172, 172, 172);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none!important;
+    color: black!important;
+}
+
+ul{
+    list-style: none;
+}

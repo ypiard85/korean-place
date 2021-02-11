@@ -1,0 +1,8 @@
+a{
+    text-decoration: none!important;
+    color: black!important;
+}
+
+.nav_option > a > i{
+    font-size: 11px!important;
+}

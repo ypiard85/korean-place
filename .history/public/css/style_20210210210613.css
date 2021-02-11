@@ -1,0 +1,32 @@
+:root{
+    --border-light: rgb(172, 172, 172);
+}
+
+a{
+    text-decoration: none!important;
+    color: black!important;
+}
+
+ul{
+    list-style: none;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.nav_left ul, .nav_right ul{
+    display: flex;
+    align-content: center;
+}
+
+.nav_left > ul > li  a, .nav_right > ul > li  a {
+    padding: 5px 10px;
+}
+
+.nav_right > ul > li:not(:last-child){
+    border-left: 1px solid var(--border-light);
+}

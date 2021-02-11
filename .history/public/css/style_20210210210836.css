@@ -1,0 +1,23 @@
+:root{
+    --border-light: rgb(172, 172, 172);
+}
+
+a{
+    text-decoration: none!important;
+    color: black!important;
+}
+
+ul{
+    list-style: none;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.nav_left ul, .nav_right ul{
+    display: flex;
+    align-content: center;
+}

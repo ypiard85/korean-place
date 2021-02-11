@@ -1,0 +1,9 @@
+a{
+    text-decoration: none!important;
+    color: black!important;
+}
+
+ul{
+    list-style: none;
+    margin-top: 20px;
+}

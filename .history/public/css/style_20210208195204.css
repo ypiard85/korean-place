@@ -1,0 +1,14 @@
+a{
+    text-decoration: none!important;
+    color: black!important;
+}
+
+.nav_option > a{
+    font-size: 12px!important;
+}
+
+.bg_img{
+    background-image: url('https://img.ev.mu/images/regions/52/960x640/52.jpg');
+    background-repeat: no-repeat;
+    height: 200px;
+}

@@ -1,0 +1,5 @@
+twig:
+    default_path: '%kernel.project_dir%/templates'
+handlers:
+  - url: /css
+    static_dir: public/css

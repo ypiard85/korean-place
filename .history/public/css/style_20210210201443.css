@@ -1,0 +1,21 @@
+a{
+    text-decoration: none!important;
+    color: black!important;
+}
+
+ul{
+    list-style: none;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav_left ul, .nav_right ul{
+    display: flex;
+}
+
+.nav_left > ul > li  a, .nav_right > ul > li  a {
+    padding: 5px 10px;
+}
