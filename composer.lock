@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a790c82f0546916d7fffc94af4defd54",
+    "content-hash": "1581f2e2723f43c14b42dab3bc5ee495",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -1468,6 +1468,52 @@
             "time": "2020-12-29T14:50:06+00:00"
         },
         {
+            "name": "espresso-dev/instagram-basic-display-php",
+            "version": "v1.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/espresso-dev/instagram-basic-display-php.git",
+                "reference": "8b9ac7a7bd3dca6c3a31ca66afe5508e0eae9f28"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/espresso-dev/instagram-basic-display-php/zipball/8b9ac7a7bd3dca6c3a31ca66afe5508e0eae9f28",
+                "reference": "8b9ac7a7bd3dca6c3a31ca66afe5508e0eae9f28",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "EspressoDev\\InstagramBasicDisplay\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Herman Schutte",
+                    "email": "herman@espresso.dev"
+                }
+            ],
+            "description": "A simple PHP class for accessing the Instagram Basic Display API",
+            "homepage": "https://github.com/espresso-dev/instagram-basic-display-php",
+            "keywords": [
+                "api",
+                "instagram"
+            ],
+            "support": {
+                "issues": "https://github.com/espresso-dev/instagram-basic-display-php/issues",
+                "source": "https://github.com/espresso-dev/instagram-basic-display-php/tree/v1.1.4"
+            },
+            "time": "2020-10-22T07:42:32+00:00"
+        },
+        {
             "name": "friendsofphp/proxy-manager-lts",
             "version": "v1.0.3",
             "source": {
@@ -1940,6 +1986,53 @@
                 }
             ],
             "time": "2021-02-07T21:35:59+00:00"
+        },
+        {
+            "name": "php-instagram-api/php-instagram-api",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/galen/PHP-Instagram-API.git",
+                "reference": "7a796fdae715fcdccc00590933ce482437342c35"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/galen/PHP-Instagram-API/zipball/7a796fdae715fcdccc00590933ce482437342c35",
+                "reference": "7a796fdae715fcdccc00590933ce482437342c35",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Instagram": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Galen Grover",
+                    "email": "galenjr@gmail.com",
+                    "homepage": "http://www.galengrover.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP Instagram API for PHP 5.3+",
+            "homepage": "https://github.com/galen/PHP-Instagram-API",
+            "keywords": [
+                "instagram"
+            ],
+            "support": {
+                "issues": "https://github.com/galen/PHP-Instagram-API/issues",
+                "source": "https://github.com/galen/PHP-Instagram-API/tree/master"
+            },
+            "time": "2013-11-13T23:10:03+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -8165,7 +8258,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "php-instagram-api/php-instagram-api": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

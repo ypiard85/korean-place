@@ -1,0 +1,347 @@
+:root{
+    --border-light: rgb(197, 195, 195);
+    --text-blue-dark: rgb(23, 23, 71);
+    --text-blue-light: rgb(107, 107, 235);
+    --text-blue-dark-hover: rgb(104, 148, 243);
+    --text-en-avant: rgb(85, 255, 161);
+    --bg-section-light: rgb(248, 248, 248);
+    --bg-button-blue: rgb(84, 84, 218);
+    --bg-button-blue-light: rgb(96, 96, 255);
+}
+
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+p{
+    font-size: 20px;
+}
+
+/*RESET*/
+
+a{
+    text-decoration: none!important;
+}
+
+ul{
+    list-style: none;
+}
+
+.wrapper{
+    width: 85%;
+    margin: auto;
+    max-width: 100%;
+}
+
+.text_muted{
+    margin-top: -5px;
+}
+
+button{
+    outline: none;
+    cursor: pointer;
+}
+
+/*REUTILISABLE*/
+
+.tall_title{
+    color: var(--text-blue-light);
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.small_title{
+    color: var(--text-blue-dark);
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.small_title > span{
+    color: var(--text-blue-light);
+}
+
+.text-center{
+    text-align: center;
+}
+
+/*NAV*/
+
+.nav{
+    border-bottom: 1px solid var(--border-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    margin-top: 20px;
+
+}
+
+.nav a, i {
+    color: var(--text-blue-dark);
+    font-weight: 600;
+}
+
+.nav a:hover, .mobile_link a:hover, .mobile_header a:hover,
+#burger > i:hover, #close > i:hover{
+    color: var(--text-blue-dark-hover);
+}
+
+.login{
+    border-left: 1px solid var(--border-light);
+    padding-left: 10px;
+}
+
+.home{
+    border-right: 1px solid var(--border-light);
+    padding-right: 10px;
+}
+
+.burger, .close{
+    cursor: pointer;
+}
+
+.nav_left > ul, .nav_right > ul{
+    display: flex;
+}
+
+.nav_left > ul > li{
+    margin-right: 20px;
+}
+
+.nav_right > ul > li{
+    margin-left: 20px;
+}
+
+/*NAV MOBILE*/
+
+.nav_mobile{
+    top: 0;
+    bottom: 0;
+    left:0;
+    right: 0;
+    position: fixed;
+    background: white;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.mobile_header > ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.mobile_header > ul > li {
+    margin-right: 10px;
+}
+
+#close > i{
+    margin-left: 30px;
+}
+
+#burger, #close{
+    cursor: pointer;
+}
+
+.mobile_link ul{
+    display: grid;
+    grid-gap: 20px;
+    width: 50%;
+    margin: 100px auto;
+}
+
+.mobile_link > ul > li > a{
+    font-size: 1.5rem;
+}
+
+.open_nav{
+    display: block;
+}
+
+.close_nav{
+    display: none;
+}
+
+/*HOME PRESENTATION*/
+
+.home_presentation{
+    padding-top: 30px;
+    width: 900px;
+    max-width: 100%;
+    margin: auto;
+}
+
+.korean_hour{
+    display: flex;
+    align-items: center;
+}
+
+.timezone{
+    position: relative;
+    color: var(--text-blue-light);
+    font-weight: 600;
+    z-index: 100;
+}
+
+.timezone::before{
+   content: '';
+   position: absolute;
+   left: -15px;
+   height: 25px;
+   background-color: var(--text-blue-dark);
+   width: 2px;
+}
+
+.timezone > span{
+    padding: 0px;
+    font-size: 1em;
+}
+
+
+/*METEO*/
+
+.meteo{
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.live_weather{
+    background-color: var(--text-en-avant);
+    width: 170px;
+    text-align: center;
+    padding: 3px;
+    border-radius: 90px;
+    color: white;
+}
+
+.item{
+    width: 200px;
+    height: 200px;
+    max-width: 100%;
+    margin-right: 10px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.082);
+    border: 1px solid rgba(0, 0, 0, 0.185);
+    border-radius: 10px;
+}
+
+.city{
+    font-size: 24px;
+    color:  var(--text-blue-light);
+    font-weight: 500;
+}
+
+/*HOME CARNET DE ROUTE*/
+
+.section_dark{
+    background-color: var(--bg-section-light);
+}
+
+
+.home_button_cdr > a{
+    margin-right: 10px;
+    padding: 20px 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.btn_plein{
+    background-color: var(--bg-button-blue);
+    color: #fff;
+}
+
+.btn_plein:hover{
+    background-color: var(--bg-button-blue-light);
+}
+
+.btn_empty{
+    border: 2px solid var(--bg-button-blue);
+    color: var(--bg-button-blue);
+}
+
+.btn_empty:hover{
+    background-color: var(--bg-button-blue);
+    color: #fff;
+}
+
+
+@media screen and (min-width: 800px){
+    #burger{
+        display: none;
+    }
+
+    .nav_mobile{
+        display: none;
+    }
+
+    .tall_title{
+        font-size: 3em;
+    }
+
+    .small_title{
+        font-size: 2em;
+    }
+
+    .hero_kakao_right img{
+        width: 400px;
+    }
+
+    .home_button_cdr > a{
+        font-size: 20px;
+    }
+}
+
+
+
+@media screen and (max-width: 800px){
+    .login, .register{
+        display: none;
+    }
+
+    .wrapper{
+        padding: 0 20px;
+    }
+
+    .hero_kakao_right img{
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 585px){
+    .discussion{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 585px){
+    .about{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .forum{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 950px){
+    .wrapper{
+        width: 100%;
+        margin: auto;
+        padding: 20px;
+    }
+}

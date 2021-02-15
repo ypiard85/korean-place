@@ -1,0 +1,76 @@
+{% extends 'base.html.twig' %}
+{% block title %}Korean Titile site{% endblock %}
+
+
+
+{% block body %}
+
+<section class="home_presentation wrapper">
+    <div class="d-flex justify-content-between">
+        <div class="title_section">
+            <p class="tall_title">Découvrez</p>
+            <p class="small_title">La Corée Du Sud <span>autrement</span></p>
+        </div>
+        <div class="timezone">
+            <span class="heures">{{ h }}</span>
+            <span class="h">H</span>
+            <span class="minutes">{{ i }}</span>
+        </div>
+    </div>
+    <div class="home_content">
+        <p class="mt-3">La corée du sud est un pays regorgant de surprises , d’admiration  devant les paysages de
+            cartes postals et d’étonnant lieux atipique.
+            La tranquilité, la facilité de transport et la sécurité font de la corée une destination
+            idéale pour un dépaysement total. </p>
+    </div>
+    <h3 class="mt-4 live_weather">Meteo en direct</h3>
+    <div class="meteo mt-3">
+        <div class="d-flex" id="meteo"></div>
+    </div>
+</section>
+
+<section class="section_dark home_carnet_de_route mt-5 pt-5 pb-5">
+    <div class="wrapper">
+        <div class="hero_kakao  row">
+            <div class="hero_kakao_left col-xl-8 col-md-6 col-sm-12 mb-5">
+                <div class="title_section">
+                    <p class="tall_title">Définir votre</p>
+                    <p class="small_title">carnet de route</p>
+                </div>
+                <div class="home_content mt-3">
+                    <p>Définissez vos destinnations préférer en 1 clic
+                        et construisé votre carnet de route parmis
+                        des milliers de destinations conseiller par la communauté.
+                    </p>
+                </div>
+                <div class="mt-4 home_button_cdr">
+                    <a href="" class="btn_plein mb-3">Construire mon carnet de route </a>
+                    <a href="" class="btn_empty">Ajouter une destination</a>
+                </div>
+            </div>
+            <img class="hero_kakao_right col-xl-4 col-md-6 col-sm-12" src="{{ asset('image/kakaomap.png') }}" alt="kakaomap">
+        </div>
+    </div>
+</section>
+
+<section class="instagram pt-5 pb-5">
+    <div class="wrapper">
+        <div class="row">
+            <div class="title_section col-md-5">
+                <p class="tall_title">Des nouvelles</p>
+                <p class="small_title">du blog</p>
+                <div class="home_content mt-3">
+                    <p>
+                        Venez découvrir les actualités autour de la corée en grand
+                    </p>
+                </div>
+                <div class="mt-4 home_button_cdr">
+                    <a href="" class="btn_empty">Accédé au blog</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block javascriptsfooter %}{% endblock %}

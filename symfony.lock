@@ -81,6 +81,9 @@
     "egulias/email-validator": {
         "version": "2.1.25"
     },
+    "espresso-dev/instagram-basic-display-php": {
+        "version": "v1.1.4"
+    },
     "friendsofphp/proxy-manager-lts": {
         "version": "v1.0.3"
     },
@@ -101,6 +104,9 @@
     },
     "nikic/php-parser": {
         "version": "v4.10.4"
+    },
+    "php-instagram-api/php-instagram-api": {
+        "version": "dev-master"
     },
     "phpdocumentor/reflection-common": {
         "version": "2.2.0"
