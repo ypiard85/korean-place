@@ -1,0 +1,12 @@
+@import './root.css'
+
+label{
+    margin-bottom: 10px;
+    margin-right: 20px;
+}
+
+.login_form{
+    width: 600px!important;
+    max-width: 80%;
+    margin: 0 20px;
+}

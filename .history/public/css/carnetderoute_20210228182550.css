@@ -1,0 +1,5 @@
+.searchLieux{
+    display: flex;
+    justify-content: center;
+    background: red;
+}

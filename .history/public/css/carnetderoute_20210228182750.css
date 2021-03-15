@@ -1,0 +1,17 @@
+.searchLieux{
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    margin: 0 auto;
+}
+
+.searchLieux input{
+    flex: 1;
+    outline: none;
+    border: none;
+}
+
+.searchLieux button{
+    background-color: transparent;
+    border: none;
+}

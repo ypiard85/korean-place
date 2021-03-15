@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome !{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <!-- CSS only -->
+            <link rel="stylesheet" href=" {{ asset('css/style.css') }} ">
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    </head>
+    <body>
+        <div class="wrapper">
+            <nav class="nav">
+                <div class="nav_left">
+                    <ul>
+                        <li class="home"><a href="{{ path('accueil')}} "><i class="fas fa-home"></i></a></li>
+                        <li class="carnet"><a href="{{ path("carnet_de_route") }}">Carnet de route</a></li>
+                        <li class="blog"><a href="">Blog</a></li>
+                        <li class="forum"><a href="">Forum</a></li>
+                        <li class="about"><a href="">A propos</a></li>
+                        <li class="discussion"><a href="">Discussions</a></li>
+                    </ul>
+                </div>
+                <div class="nav_right">
+                    <ul>
+                        {% if app.user %}
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Dropdown
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><hr class="dropdown-divider"></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                          </li>
+                        {% else %}
+                        <li class="login"><a href="{{ path('app_login') }}">Se connecter</a></li>
+                        <li class="text_muted">.</li>
+                        <li class="register"><a href="{{ path('app_register') }}">S'inscrire</a></li>
+                        {% endif %}
+                        <li id="burger"><i class="fas fa-bars"></i></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="nav_mobile close_nav">
+                <div class="mobile_header">
+                    <ul>
+                    {% if app.user %}
+                        <li class="login_mobile"><a class="pseudo_mobile">{{ app.user.pseudo }} </a>
+                            <ul class="mt-2 login_option_mobile close_nav">
+                                <li><a href="/profil">Profil</a></li>
+                                <li><a href="/carnet">mes routes</a></li>
+                                <li><a href="{{ path('app_logout') }}">Logout</a></li>
+                            </ul>
+                        </li>
+                        {% else %}
+                        <li><a href="{{ path('app_login') }}">Se connecter</a></li>
+                        <li class="text_muted">.</li>
+                        <li><a href="{{ path('app_register') }}">S'inscrire</a></li>
+                        {% endif %}
+
+                        <li id="close"><i class="fas fa-times"></i></li>
+                    </ul>
+                </div>
+                <div class="mobile_link">
+                    <ul>
+                        <li><a href="{{ path('accueil') }}">Home</a></li>
+                        <li><a href=" {{ path("carnet_de_route") }} ">Carnet de route</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Forum</a></li>
+                        <li><a href="">A propos</a></li>
+                        <li><a href="">Discution</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+            {% block body %}{% endblock %}
+
+        <footer role="footer" class="footer pt-4 pb-4">
+            <div class="wrapper">
+                <div class="d-flex justify-content-between flex-wrap">
+                    <div class="footer_left mb-5">
+                        <h3 class="mb-3">Rejoindre la communauté</h3>
+                        <p>Rejoindre cette communaité c’est faire partager votre passion pour la corée du sud,
+                            partager vos annegtotes,  vos points positifs et negatifs
+                        </p>
+                    </div>
+                    <div class="footer_center">
+                        <h3 class="mb-3">Nous trouver</h3>
+                        <ul>
+                            <li><a href=""><i class="far fa-envelope"></i><span>Email</span></a></a></li>
+                            <li><a href=""><i class="fab fa-instagram"></i><span>Intagram</span></a></a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_right">
+                        <h3 class="mb-3">Se diriger sur le site</h3>
+                        <ul>
+                            <li><a href="{{ path('accueil') }}">Home</a></li>
+                            <li><a href=" {{ path("carnet_de_route") }} ">Carnet de route</a></li>
+                            <li><a href="">Blog</a></li>
+                            <li><a href="">Forum</a></li>
+                            <li><a href="">A propos</a></li>
+                            <li><a href="">Discution</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+        <script src="{{ asset('js/nav.js')}}"></script>
+
+        {% block javascriptsfooter %}{% endblock %}
+
+    </body>
+</html>

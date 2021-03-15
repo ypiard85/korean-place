@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Carnet de route{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('./css/carnetderoute.css') }}">
+{% endblock %}
+
+{% block body %}
+<section class="carnet_de_route pt-4 pb-4">
+    <div class="wrapper">
+        <form method="GET" action="/" accept-charset="UTF-8" class="searchLieux">
+            <input type="text" placeholder="Rechercher un lieux à visiter" autofocus autocomplete="off" />
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+        <div class="d-flex justify-content-center my-4">
+            <a href="f" class="btn btn-small btn-success">Ajouter une ville</a>
+        </div>
+
+        <div class="villes mt-5 mb-5">
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <h4 class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Rechercher par villes
+                        </h4>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                        {% for ville in villes %}
+                            <div class="accordion-body"><a href="/carnet_de_route/{{ ville.name }}">{{ ville.name }}</a></div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lieux mt-5">
+            <h4>Idée de lieux à visiter </h4>
+            <div class="lieu mt-4">
+                {% for lieu in lieuxAll %}
+                    <div class="card card_lieu">
+                            <img src="{{ asset('lieux/') ~ lieu.image }}" alt="" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ lieu.title }}</h5>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item city_route"><i class="fas fa-map-marker-alt"></i> {{ lieu.villes.name }}</li>
+                            <li class="list-group-item">
+                                <a href="/lieux/{{ lieu.userName.pseudo }}">
+                                   <small><i class="fas fa-user"></i> {{ lieu.userName.pseudo }} </li></small>
+                                </a>
+                        </ul>
+                        <div class="card-body">
+                            <a class="card-link" href="/carnet-de-route/{{ lieu.villes.name }}/{{ lieu.title }}">Voir plus</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block javascriptsfooter %}
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d4641da7fb747a86afa6e13fdfb0ed0e"></script>
+<script src=" {{ asset('js/carnetderoute.js') }} "></script>
+{% endblock %}

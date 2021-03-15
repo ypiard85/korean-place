@@ -1,0 +1,103 @@
+@import './root.css';
+
+.searchLieux{
+    display: flex;
+    justify-content: center;
+    background: #FFF;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.116);
+    width: 500px;
+    padding: 8px;
+    margin: 0 auto;
+    max-width: 100%;
+    border: 1px solid rgb(190, 190, 190);
+}
+
+.searchLieux input{
+    flex: 1;
+    outline: 1px blue;
+    border: none;
+    padding: 8px;
+    font-weight: bold;
+}
+
+.searchLieux button{
+    background-color: #fff;
+    border: none;
+    padding: 8px 15px;
+}
+
+input:focus .searchLieux{
+   border: 1px solid blue!important;
+}
+
+.card_lieu{
+    margin-right: 15px;
+}
+
+.lieu{
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.carnet_de_route h3{
+    color: var(--text-blue-light);
+}
+
+.lieu div{
+    color: black;
+    display: block;
+}
+
+
+.card_lieu img{
+    width: 180px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.card_lieu{
+    position: relative;
+}
+
+.card_lieu a{
+    display: inline-block;
+    padding: 3px 5px;
+    border-radius: 5px;
+}
+
+.like{
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+}
+
+.like i{
+    font-size: 24px;
+}
+
+.villesname ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.villesname li{
+    width: 200px;
+    max-width: 100%;
+    background: rgb(0,249,120);
+    background: linear-gradient(90deg, rgb(144, 253, 197) 30%, rgba(0, 173, 23, 0.396) 100%);
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 10px 5px;
+}
+
+.villesname a{
+    display: block;
+    color: black;
+}

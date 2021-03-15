@@ -1,0 +1,7 @@
+.searchLieux{
+    display: flex;
+    justify-content: center;
+    background: red;
+    width: 500px;
+    margin: 0 auto;
+}

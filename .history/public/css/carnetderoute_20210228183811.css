@@ -1,0 +1,28 @@
+.searchLieux{
+    display: flex;
+    justify-content: center;
+    background: #FFF;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.116);
+    border-radius: 50px;
+    width: 500px;
+    padding: 8px;
+    margin: 0 auto;
+    max-width: 100%;
+    border: 1px solid gray;
+}
+
+.searchLieux input{
+    flex: 1;
+    outline: none;
+    border: none;
+    padding: 8px;
+    font-weight: bold;
+}
+
+.searchLieux button{
+    background-color: #fff;
+    border: none;
+    padding: 8px 15px;
+    background: rgb(188, 188, 206);
+    border-radius: 0 50px 50px 0;
+}

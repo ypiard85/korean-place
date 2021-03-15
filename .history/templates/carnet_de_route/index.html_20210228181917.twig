@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CarnetDeRouteController!{% endblock %}
+
+{% block body %}
+<section class="carnet_de_route pt-4 pb-4">
+    <div class="wrapper">
+        <form method="post" accept-charset="UTF-8">
+
+            <input type="hidden" name="action" value="users/login">
+
+            <h3><label for="loginName">Username or email</label></h3>
+            <input id="loginName" type="text" name="loginName"
+                value="{{ craft.app.user.rememberedUsername }}">
+
+            <h3><label for="password">Password</label></h3>
+            <input id="password" type="password" name="password">
+
+            <label>
+                <input type="checkbox" name="rememberMe" value="1">
+                Remember me
+            </label>
+
+            <input type="submit" value="Login">
+
+            {% if errorMessage is defined %}
+                <p>{{ errorMessage }}</p>
+            {% endif %}
+        </form>
+
+        <p><a href="{{ url("forgotpassword") }}">Forgot your password?</a></p>
+    </div>
+</section>
+{% endblock %}
+
+{% block javascriptsfooter %}
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d4641da7fb747a86afa6e13fdfb0ed0e"></script>
+<script src=" {{ asset('./js/listeRoute.js') }} "></script>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+.searchLieux{
+    display: flex;
+    justify-content: center;
+    background: #FFF;
+    box-shadow: 0 0 0px black;
+    padding: 10px;
+    border-radius: 50px;
+    width: 500px;
+    margin: 0 auto;
+}
+
+.searchLieux input{
+    flex: 1;
+    outline: none;
+    border: none;
+}
+
+.searchLieux button{
+    background-color: #fff;
+    border: none;
+}

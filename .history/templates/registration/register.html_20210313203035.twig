@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/auth.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5 mb-5 login_form">
+    {% for flashError in app.flashes('verify_email_error') %}
+    <div class="alert alert-danger" role="alert">{{ flashError }}</div>
+    {% endfor %}
+
+    <h3>Inscrivez-vous</h3>
+
+    {{ form_start(registrationForm) }}
+    <div class="my-4">
+        {{ form_row(registrationForm.pseudo, {
+
+            label: 'Choisisez un pseudo'
+        }
+            ) }}
+    </div>
+    <div class="my-4">
+        {{ form_row(registrationForm.email) }}
+    </div>
+    {{ form_row(registrationForm.plainPassword, {
+        label: 'Mot de passe'
+    }) }}
+    <div class="my-4">
+        {{ form_row(registrationForm.agreeTerms, {
+            label: 'Je ne suis pas un robot'
+        }) }}
+    </div>
+    <button type="submit" class="btn btn-primary">Register</button>
+    {{ form_end(registrationForm) }}
+</div>
+{% endblock %}

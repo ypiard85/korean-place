@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Carnet de route{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('./css/carnetderoute.css') }}">
+{% endblock %}
+
+{% block body %}
+<section class="carnet_de_route pt-4 pb-4">
+    <div class="wrapper">
+        <form method="GET" action="/" accept-charset="UTF-8" class="searchLieux">
+            <input type="text" placeholder="Rechercher un lieux à visiter" autofocus autocomplete="off" />
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+        <div class="lieux mt-4">
+            <h3>Les lieux</h3>
+            <div class="lieux_option">
+
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block javascriptsfooter %}
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d4641da7fb747a86afa6e13fdfb0ed0e"></script>
+<script src=" {{ asset('js/listeRoute.js') }} "></script>
+{% endblock %}

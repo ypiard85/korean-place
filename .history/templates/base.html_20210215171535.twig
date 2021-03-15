@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome !{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <!-- CSS only -->
+            <link rel="stylesheet" href=" {{ asset('css/style.css') }} ">
+            <link rel="stylesheet" href=" {{ asset('bootstrap/bootstrap-grid.css') }} ">
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+            <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">-->
+
+    </head>
+    <body>
+        <div class="wrapper">
+            <nav class="nav">
+                <div class="nav_left">
+                    <ul>
+                        <li class="home"><a href=""><i class="fas fa-home"></i></a></li>
+                        <li class="carnet"><a href="">Carnet de route</a></li>
+                        <li class="blog"><a href="">Blog</a></li>
+                        <li class="forum"><a href="">Forum</a></li>
+                        <li class="about"><a href="">A propos</a></li>
+                        <li class="discussion"><a href="">Discussions</a></li>
+                    </ul>
+                </div>
+                <div class="nav_right">
+                    <ul>
+                        <li class="login"><a href="">Se connecter</a></li>
+                        <li class="text_muted">.</li>
+                        <li class="register"><a href="">S'inscrire</a></li>
+                        <li id="burger" ><i class="fas fa-bars"></i></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="nav_mobile close_nav">
+                <div class="mobile_header">
+                    <ul>
+                        <li><a href="">Se connecter</a></li>
+                        <li class="text_muted">.</li>
+                        <li><a href="">S'inscrire</a></li>
+                        <li id="close"><i class="fas fa-times"></i></li>
+                    </ul>
+                </div>
+                <div class="mobile_link">
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Carnet de route</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Forum</a></li>
+                        <li><a href="">A propos</a></li>
+                        <li><a href="">Discution</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+            {% block body %}{% endblock %}
+
+        <footer role="footer" class="footer pt-4 pb-4">
+            <div class="wrapper">
+                <div class="d-flex justify-content-between flex-wrap">
+                    <div class="footer_left mb-5">
+                        <h3 class="mb-3">Rejoindre la communauté</h3>
+                        <p>Rejoindre cette communaité c’est faire partager votre passion pour la corée du sud,
+                            partager vos annegtotes,  vos points positifs et negatifs
+                        </p>
+                    </div>
+                    <div class="footer_center">
+                        <h3 class="mb-3">Nous trouver</h3>
+                        <ul>
+                            <li><a href=""><i class="far fa-envelope"></i><span>Email</span></a></a></li>
+                            <li><a href=""><i class="fab fa-instagram"></i><span>Intagram</span></a></a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_right">
+                        <h3 class="mb-3">Se diriger sur le site</h3>
+                        <ul>
+                            <li><a href="">Home</a></li>
+                            <li><a href="">Carnet de route</a></li>
+                            <li><a href="">Blog</a></li>
+                            <li><a href="">Forum</a></li>
+                            <li><a href="">A propos</a></li>
+                            <li><a href="">Discution</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        {% block javascriptsfooter %}{% endblock %}
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+
+
+        <script>
+
+            var position = 0;
+            var positionActuel = position
+
+            function ScrollChangeClass(){
+                var navClass = 'fixed_nav'
+
+                var nav = document.querySelector('nav')
+                nav.classList.add(navClass)
+
+                if (document.body.scrollTop === 0 || document.documentElement.scrollTop == 00) {
+                    nav.style.top = "0px";
+                } else if(document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                    nav.style.top = "-50px";
+                }
+            }
+
+            window.onscroll = function() {ScrollChangeClass()};
+
+
+
+        </script>
+
+    </body>
+</html>

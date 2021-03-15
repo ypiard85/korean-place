@@ -1,0 +1,12 @@
+:root{
+    --border-light: rgb(197, 195, 195);
+    --text-blue-dark: rgb(23, 23, 71);
+    --text-blue-light: rgb(107, 107, 235);
+    --text-blue-dark-hover: rgb(104, 148, 243);
+    --text-en-avant: rgb(85, 255, 161);
+    --bg-section-light: rgb(134, 255, 140);
+    --bg-button-blue: rgb(84, 84, 218);
+    --bg-button-blue-light: rgb(96, 96, 255);
+    --footer-bg: rgb(0, 0, 136);
+    --block-hover-blue-light: rgb(108, 108, 250);
+}

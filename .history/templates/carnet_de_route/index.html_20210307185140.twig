@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Carnet de route{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('./css/carnetderoute.css') }}">
+{% endblock %}
+
+{% block body %}
+<section class="carnet_de_route pt-4 pb-4">
+    <div class="wrapper">
+        <form method="GET" action="/" accept-charset="UTF-8" class="searchLieux">
+            <input type="text" placeholder="Rechercher un lieux à visiter" autofocus autocomplete="off" />
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+        <div class="lieux mt-5">
+            <h3>Idée de lieux à visiter </h3>
+            <div class="lieu mt-4">
+                {% for lieu in lieuxAll %}
+                <div class="card_lieu">
+                    <img src="{{ asset('lieux/') ~ lieu.image }}" alt="">
+                    <h4>{{ lieu.title }} </h4>
+                    <p><i class="fas fa-map-marker-alt"></i> {{ lieu.city }}</p>
+                    <a href="/carnet-de-route/{{ lieu.city }}/{{ lieu.title }}">Voir plus</a>
+                </div>
+                {% endfor %}
+             </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block javascriptsfooter %}
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d4641da7fb747a86afa6e13fdfb0ed0e"></script>
+<script src=" {{ asset('js/carnetderoute.js') }} "></script>
+{% endblock %}
